@@ -8,6 +8,12 @@
 </head>
 <body onload="startGame()">
     <div class="container">
+        <div class="giveUpNewGame">
+            <button class="giveUpNewGameButton showMessage" onclick="giveUp()" id="giveUpButton">Give Up</button>
+        </div>
+        <div class="giveUpNewGame">
+            <button class="giveUpNewGameButton" onclick="reload()" id="newGameButton">New Game</button>
+        </div>
         <div class="message" id="tooShortMessage">
             <p>This word is too short</p>
         </div>

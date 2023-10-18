@@ -192,3 +192,26 @@
 .messageButton:hover{
     background: #63A23A;
 }
+.giveUpNewGame{
+    left: 50%;
+    top: 4%;
+    position: absolute;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+.giveUpNewGameButton{
+    padding: 7px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #D5DBEE;
+    color: #444547;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    min-width: 80px;
+    cursor: pointer;
+}
+.giveUpNewGameButton:hover{
+    background: #C5C9D5;
+}

@@ -231,3 +231,12 @@ function goBack(){
 function reload(){
     window.location.reload();
 }
+
+//
+//function to give up and show a word
+function giveUp(){
+    if(attemptNumber < 6){
+        messageVictoryLose(`You lost. The word was ${word.toLowerCase()}. Try again.`);
+    }
+    attemptNumber = 6;
+}
