@@ -144,6 +144,9 @@ function reactToUserWonLostTried(gamerWord){
     if(gamerWord == word){
         attemptNumber = 6;
         setTimeout(() => {
+            //add confetti animation
+            window.confetti({particleCount: 350, angle: -90, spread: 100, gravity: 0.7, origin: {x: 0.3, y: -0.5}});
+            window.confetti({particleCount: 350, angle: -90, spread: 100, gravity: 0.7, origin: {x: 0.7, y: -0.5}});
             messageVictoryLose("Congratulations! You won! Try new game!");
         }, 500);
     }
