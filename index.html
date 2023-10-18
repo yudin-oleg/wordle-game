@@ -8,6 +8,19 @@
 </head>
 <body onload="startGame()">
     <div class="container">
+        <div class="message" id="tooShortMessage">
+            <p>This word is too short</p>
+        </div>
+        <div class="message" id="doNotExistMessage">
+            <p>This word doesn't exist</p>
+        </div>
+        <div class="message" id="victoryLoseMessage">
+            <p></p>
+            <div class="buttons">
+                <button class="messageButton" id="backButton" onclick="goBack()">Go Back</button>
+                <button class="messageButton" id="reloadButton" onclick="reload()">New Game</button>
+            </div>
+        </div>
         <div class="game">
             <div class="display" id="display">
                 <div class="row">

@@ -39,48 +39,6 @@
     cursor: default;
     text-transform: uppercase;
 }
-.keyboard{
-    max-width: 700px;
-    height: 300px;
-    position: relative;
-    top: 360px;
-    display: flex;
-    flex-direction: column;
-}
-.keyRow{
-    width: 100%;
-    display: flex;
-}
-.letterButton{
-    min-width: 50px;
-    height: 50px;
-    margin: 4px 4px;
-    background: #D5DBEE;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #444547;
-    font-size: 18px;
-    font-weight: bold;
-    flex: 1;
-    text-transform: capitalize;
-}
-.action{
-    min-width: 50px;
-    height: 50px;
-    margin: 4px 4px;
-    background: #D5DBEE;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #444547;
-    font-size: 18px;
-    font-weight: bold;
-    flex: 2;
-    text-transform: capitalize;
-}
 .letter.chosen{
     border-color: #a7adc0;
     animation-name: PopIn;
@@ -128,6 +86,33 @@
         transform: rotateX(0deg);
     }
 }
+.keyboard{
+    max-width: 700px;
+    height: 300px;
+    position: relative;
+    top: 360px;
+    display: flex;
+    flex-direction: column;
+}
+.keyRow{
+    width: 100%;
+    display: flex;
+}
+.letterButton{
+    min-width: 50px;
+    height: 50px;
+    margin: 4px 4px;
+    background: #D5DBEE;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #444547;
+    font-size: 18px;
+    font-weight: bold;
+    flex: 1;
+    text-transform: capitalize;
+}
 .letterButton:hover{
     background: #C5C9D5;
 }
@@ -146,6 +131,64 @@
     color: #fff;
     border: none;
 }
+.action{
+    min-width: 50px;
+    height: 50px;
+    margin: 4px 4px;
+    background: #D5DBEE;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #444547;
+    font-size: 18px;
+    font-weight: bold;
+    flex: 2;
+    text-transform: capitalize;
+}
 .action:hover{
     background: #C5C9D5;
+}
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 10;
+    padding: 20px 20px;
+    text-align: center;
+    background: #fff;
+    cursor: default;
+    color: #444547;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.2), 8px 8px 15px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
+    flex-direction: column;
+}
+.showMessage{
+    visibility: visible;
+}
+.buttons{
+    margin-top: 10px;
+}
+.messageButton{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #79b851;
+    color: #fff;
+    padding: 7px 10px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 10px;
+    min-width: 80px;
+    cursor: pointer;
+}
+.messageButton:hover{
+    background: #63A23A;
 }
