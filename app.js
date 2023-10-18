@@ -31,3 +31,16 @@ function enterLetter(e){
         letterNumber++; //increase the number of the next display element to be processed
     }
 }
+
+//
+//function to remove letter from the display element
+function deleteLetter(){
+    //check if a single letter was entered. If not do not react 
+    if(letterNumber > 0){
+        //clear the display element from the letter
+        letterRows[attemptNumber].getElementsByTagName("input")[letterNumber - 1].value = "";
+        //remove border for chosen display element
+        letterRows[attemptNumber].getElementsByTagName("input")[letterNumber - 1].classList.remove("chosen");
+        letterNumber--; //decrease the number of the next display element to be processed
+    }
+}
