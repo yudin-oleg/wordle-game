@@ -11,4 +11,4 @@ at the another position than you entered. If it is colored with green you are co
 
 ## Showing the process
 
-![](https://github.com/yudin-oleg/Wordle/blob/main/wordle2.gif)
+![](https://github.com/yudin-oleg/wordle-game/blob/main/wordle2.gif)
