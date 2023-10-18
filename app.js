@@ -75,6 +75,15 @@ function enterWord(){
     else if(letterNumber < 5){
         return;
     }
+    
+    //get a word entered by a user
+    var gamerWord = getGamerWord();
+
+    //check if a word entered by a user exists if it does not exist do not process it
+    if(!doesUsersWordExists(gamerWord)){
+        alert("This word does not exist!");
+                return;
+    }
     //check what status do letters from uers word have
     for(let i=0; i<5; i++){
         var letterToCheck = letterRows[attemptNumber].getElementsByTagName("input")[i];;
@@ -98,4 +107,27 @@ function enterWord(){
     }
     letterNumber = 0;
     attemptNumber++;
+}
+
+//
+//function to get the word entered by a user
+function getGamerWord(){
+    var gamerWord = "";
+    for (let i=0; i<5; i++){
+        var letterToCheck = letterRows[attemptNumber].getElementsByTagName("input")[i];
+        gamerWord += letterToCheck.value;
+    }
+    return gamerWord;
+}
+
+//
+//function to check if a word entered by user exist at all
+function doesUsersWordExists(userWord){
+    var userWord = userWord;
+    if(wordsArray.includes(userWord)){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
