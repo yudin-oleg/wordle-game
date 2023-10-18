@@ -1,4 +1,4 @@
-var word = "DANCE"; //the word to find out
+var word = ""; //the word to find out
 var attemptNumber = 0; //number of the attempt/the row
 var letterNumber = 0; //number of the letter in the row
 var letterRows = document.getElementsByClassName("row"); //number of the rows in the game
@@ -9,11 +9,30 @@ var wordsArray = []; //array of all possible words from where one will be chosen
 //
 //function for choosing the word and adding eventListeners to alphabet buttons
 function startGame(){
+    //open the txt file with words
+    fetch("words.txt")
+    .then((res) => res.text())
+    .then((text) => {
+    //create an array of words from the file
+    //and make words in the array upperCase to correctly compare them with alphabet letters
+    wordsArray = text.toUpperCase().split(/\r?\n/);
+    var randomNumber = getRandomIntInclusive(0, wordsArray.length); //get a random number to get a word from the array of words
+    word = wordsArray[randomNumber]; //make the chosen word upperCase to correctly compare it with alphabet letters
     //add eventListener for every letter in the alphabet/letter button
     for (let i = 0; i< letterButtons.length; i++){
         letterButtons[i].addEventListener('click', enterLetter, false);
     }
+    })
+    .catch((e) => console.log(e));
 }
+
+//
+//function for choosing the random number
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+  }
 
 //
 //funcion for adding the chosen letter in the row on the display
