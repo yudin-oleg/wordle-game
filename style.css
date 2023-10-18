@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+.game{
+    background: #fff;
+    max-width: 500px;
+    padding: 10px 10px;
+    margin-bottom: 40px;
+    position: absolute;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.letter{
+    width: 50px;
+    height: 50px;
+    margin: 3px 3px;
+    background: #fbfcff;
+    outline: none;
+    border: 2px solid #dee1e9;
+    border-radius: 5px;
+    color: #444547;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    cursor: default;
+    text-transform: uppercase;
+}
+.keyboard{
+    max-width: 700px;
+    height: 300px;
+    position: relative;
+    top: 360px;
+    display: flex;
+    flex-direction: column;
+}
+.keyRow{
+    width: 100%;
+    display: flex;
+}
+.letterButton{
+    min-width: 50px;
+    height: 50px;
+    margin: 4px 4px;
+    background: #D5DBEE;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #444547;
+    font-size: 18px;
+    font-weight: bold;
+    flex: 1;
+    text-transform: capitalize;
+}
+.action{
+    min-width: 50px;
+    height: 50px;
+    margin: 4px 4px;
+    background: #D5DBEE;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #444547;
+    font-size: 18px;
+    font-weight: bold;
+    flex: 2;
+    text-transform: capitalize;
+}
