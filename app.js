@@ -1,4 +1,4 @@
-var word = ""; //the word to find out
+var word = "DANCE"; //the word to find out
 var attemptNumber = 0; //number of the attempt/the row
 var letterNumber = 0; //number of the letter in the row
 var letterRows = document.getElementsByClassName("row"); //number of the rows in the game
@@ -43,4 +43,40 @@ function deleteLetter(){
         letterRows[attemptNumber].getElementsByTagName("input")[letterNumber - 1].classList.remove("chosen");
         letterNumber--; //decrease the number of the next display element to be processed
     }
+}
+
+//
+//function to check the entered word with the planned one
+function enterWord(){
+    //check if all 6 attempts were used then not allow to press the "enter" button
+    if (attemptNumber > 5){
+        return;
+    }
+    //chech if user entered less than 5 letters then show a message about it and don't allow to press the buttons
+    else if(letterNumber < 5){
+        return;
+    }
+    //check what status do letters from uers word have
+    for(let i=0; i<5; i++){
+        var letterToCheck = letterRows[attemptNumber].getElementsByTagName("input")[i];;
+        var letterInTheAlphabet = document.getElementById(letterToCheck.value);
+
+        if(letterToCheck.value === word[i]){
+            // gamerWord += letterToCheck.value;
+            letterToCheck.classList.add("correct");
+            letterInTheAlphabet.classList.add("correct");
+        }
+        else if(word.includes(letterToCheck.value)){
+            // gamerWord += letterToCheck.value;
+            letterToCheck.classList.add("elsewhere"); //!!!!make letter not to repeat
+            letterInTheAlphabet.classList.add("elsewhere");
+        }
+        else{
+            // gamerWord += letterToCheck.value;
+            letterToCheck.classList.add("absent");
+            letterInTheAlphabet.classList.add("absent");
+        }
+    }
+    letterNumber = 0;
+    attemptNumber++;
 }

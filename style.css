@@ -86,3 +86,66 @@
     animation-name: PopIn;
     animation-duration: 300ms;
 }
+@keyframes PopIn{
+    0%{
+        transform: scale(.8);
+        opacity: 0;
+    }
+    40%{
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+.letter.elsewhere{
+    background: #f3c237;
+    color: #fff;
+    border: none;
+    animation-name: upsideDown;
+    animation-duration: 500ms;
+}
+.letter.correct{
+    background: #79b851;
+    color: #fff;
+    border: none;
+    animation-name: upsideDown;
+    animation-duration: 500ms;
+}
+.letter.absent{
+    background: grey;
+    color: #fff;
+    border: none;
+    animation-name: upsideDown;
+    animation-duration: 500ms;
+}
+@keyframes upsideDown{
+    0%{
+        transform: rotateX(0deg);
+    }
+    50%{
+        transform: rotateX(90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+.letterButton:hover{
+    background: #C5C9D5;
+}
+.letterButton.elsewhere{
+    background: #f3c237;
+    color: #fff;
+    border: none;
+}
+.letterButton.correct{
+    background: #79b851;
+    color: #fff;
+    border: none;
+}
+.letterButton.absent{
+    background: grey;
+    color: #fff;
+    border: none;
+}
+.action:hover{
+    background: #C5C9D5;
+}
